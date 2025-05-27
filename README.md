@@ -1,5 +1,6 @@
-## Hi there 👋
+## Hello, I'm Alfid J.R. 👋
 
+![xone404](img/Background.png)
 <!--
 **xone404/xone404** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -14,3 +15,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+- 🔭 I’m currently working on **Komerce**
+- 🌱 I’m currently learning **Flutter** 
+- 😄😄😄😄
+
+![Hello](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdndjE1MnExanZhZ3NmbXR6cnIwcWZubGU3amoyendnOWhlcm93NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
