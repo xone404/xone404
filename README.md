@@ -27,4 +27,10 @@
 ![](https://nirzak-streak-stats.vercel.app/?user=xone404&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=xone404&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-![Hello](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdndjE1MnExanZhZ3NmbXR6cnIwcWZubGU3amoyendnOWhlcm93NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/pacman-contribution-graph-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/pacman-contribution-graph.svg">
+  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/xone404/xone404/output/pacman-contribution-graph.svg">
+</picture>
+
+###
