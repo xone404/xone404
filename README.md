@@ -16,8 +16,4 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-- 🔭 I’m currently working on **Komerce**
-- 🌱 I’m currently learning **Flutter** 
-- 😄😄😄😄
-
 ![Hello](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHdndjE1MnExanZhZ3NmbXR6cnIwcWZubGU3amoyendnOWhlcm93NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qgQUggAC3Pfv687qPC/giphy.gif)
