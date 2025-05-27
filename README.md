@@ -1,6 +1,6 @@
 ## Hello, I'm Alfid J.R. 👋
 
-![xone404](img/Background.png)
+![xone404](img/Desktop%20-%203%20(2).png)
 <!--
 **xone404/xone404** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
