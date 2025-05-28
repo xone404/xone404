@@ -3,7 +3,7 @@
 
 ##### Skills
 
-[![My Skills](https://skillicons.dev/icons?i=java,py,flutter,kotlin,git,css,html,figma,ps&theme=light)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=java,py,flutter,kotlin,css,html,figma,ps&theme=light)](https://skillicons.dev)
 
 ##### Connect with me
 
