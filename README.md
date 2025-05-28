@@ -1,5 +1,5 @@
 # *****Hello, I'm Alfid J.R.***** 👋
-![xone404](img/Desktop%20-%203%20(3).png)
+![xone404](img/Desktop%20-%203.jpg)
 
 ##### Skills
 
