@@ -1,0 +1,86 @@
+<svg fill="none" viewBox="0 0 800 200" width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="
+      width: 100%; height: 100%;
+      background: #0d1117;
+      border-radius: 8px;
+      border: 1px solid #30363d;
+      font-family: 'Consolas', 'Courier New', monospace;
+      color: #c9d1d9;
+      padding: 24px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    ">
+      <style>
+        .container { font-size: 16px; line-height: 1.8; }
+        .keyword { color: #ff7b72; }
+        .string { color: #a5d6ff; }
+        .variable { color: #79c0ff; }
+        .comment { color: #8b949e; font-style: italic; }
+        .bracket { color: #e6edf3; }
+        
+        /* Setup baris agar bisa disembunyikan dan diketik */
+        .line {
+          display: block;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 0;
+        }
+        
+        /* Pengaturan urutan dan durasi animasi mengetik */
+        .l1 { animation: typing 0.8s steps(30, end) forwards; animation-delay: 0.5s; }
+        .l2 { animation: typing 1s steps(40, end) forwards; animation-delay: 1.5s; }
+        .l3 { animation: typing 1.2s steps(50, end) forwards; animation-delay: 2.7s; }
+        .l4 { animation: typing 1.2s steps(50, end) forwards; animation-delay: 4.1s; }
+        
+        @keyframes typing {
+          from { width: 0; }
+          to { width: 100%; }
+        }
+        
+        /* Memunculkan baris terminal bash di akhir */
+        .cli-prompt {
+          opacity: 0;
+          animation: appear 0.1s forwards;
+          animation-delay: 5.5s;
+        }
+        
+        /* Kursor kotak berkedip */
+        .cursor {
+          display: inline-block;
+          width: 8px;
+          height: 18px;
+          background-color: #c9d1d9;
+          vertical-align: text-bottom;
+          margin-left: 6px;
+          opacity: 0;
+          animation: blink 1s step-end infinite;
+          animation-delay: 5.5s;
+        }
+        
+        @keyframes appear {
+          to { opacity: 1; }
+        }
+        
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      </style>
+      
+      <div class="container">
+        <div class="line l1"><span class="comment">// profile_init.php</span></div>
+        <div class="line l2"><span class="keyword">echo</span> <span class="string">"Hello, I'm Alfid J.R. 👋"</span><span class="bracket">;</span></div>
+        <div class="line l3"><span class="variable">$roles</span> <span class="keyword">=</span> <span class="bracket">[</span><span class="string">'Website Developer'</span>, <span class="string">'UI/UX Designer'</span><span class="bracket">];</span></div>
+        <div class="line l4"><span class="variable">$stack</span> <span class="keyword">=</span> <span class="bracket">[</span><span class="string">'Laravel'</span>, <span class="string">'PHP'</span>, <span class="string">'Flutter'</span><span class="bracket">];</span></div>
+        
+        <div style="margin-top: 12px;" class="cli-prompt">
+          <span style="color:#3fb950; font-weight: bold;">xone404@server</span><span style="color:#e6edf3;">:</span><span style="color:#2f81f7;">~</span><span style="color:#e6edf3;">$</span>
+          <span class="cursor"></span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
