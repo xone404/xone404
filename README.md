@@ -24,22 +24,35 @@ I am a passionate **Website Developer** and **UI/UX Designer**. I specialize in 
 
 <br>
 
-### 📊 GitHub Analytics
+### 📊 GitHub Analytics & Metrics
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=xone404&theme=dark&hide_border=false&include_all_commits=true&count_private=true&show_icons=true" height="195" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=xone404&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact" height="195" alt="Top Languages" />
+  <!-- Main Base Metrics -->
+  <img src="https://metrics.lecoq.io/xone404?theme=dark" alt="GitHub Metrics" width="800" />
 </div>
 
-<br>
+<div align="center">
+  <!-- Isometric Calendar and Languages Plugin -->
+  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_isocalendar=yes&plugin_isocalendar_duration=half-year&theme=dark" alt="Isometric Calendar" width="395" />
+  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_languages=yes&plugin_languages_details=bytes-size,percentage&theme=dark" alt="Top Languages" width="395" />
+</div>
 
 <div align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" />
+  <!-- Coding Habits & Activity -->
+  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_habits=yes&plugin_habits_charts=yes&plugin_habits_facts=yes&theme=dark" alt="Coding Habits" width="800" />
 </div>
 
 <br>
 
 ### 🐍 Contribution Graph
 <div align="center">
+  <!-- GitHub Streak -->
+  <img src="https://nirzak-streak-stats.vercel.app/?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" width="800" />
+</div>
+
+<br>
+
+<div align="center">
+  <!-- Pacman / Snake Animation -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/pacman-contribution-graph-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/pacman-contribution-graph.svg">
