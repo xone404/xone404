@@ -4,7 +4,9 @@
 </div>
 
 <br>
-
+<div align="center">
+  <img src="terminal-profile.svg" alt="Terminal Animation" width="800">
+</div>
 ### 👨‍💻 About Me
 I am a passionate **Website Developer** and **UI/UX Designer**. I specialize in building responsive, user-centric applications and designing intuitive digital experiences. Bridging the gap between visually appealing designs and robust functional code is what I do best.
 
