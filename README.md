@@ -28,8 +28,8 @@ I am a passionate **Website Developer** and **UI/UX Designer**. I specialize in 
 
 ### 📊 GitHub Analytics & Metrics
 <div align="center">
-  <!-- Main Base Metrics -->
-  <img src="https://metrics.lecoq.io/xone404?theme=dark" alt="GitHub Metrics" width="800" />
+  <!-- Isometric Calendar -->
+  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_isocalendar=yes&plugin_isocalendar_duration=half-year&theme=dark" alt="Isometric Calendar" width="395" />
 </div>
 
 <br>
