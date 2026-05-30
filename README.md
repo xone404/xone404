@@ -1,6 +1,5 @@
 <div align="center">
   <h1>Hello, I'm Alfid J.R. 👋</h1>
-  <img src="img/Desktop%20-%203.jpg" alt="Alfid JR Banner" width="100%">
 </div>
 
 <br>
