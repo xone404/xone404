@@ -32,17 +32,6 @@ I am a passionate **Website Developer** and **UI/UX Designer**. I specialize in 
   <img src="https://metrics.lecoq.io/xone404?theme=dark" alt="GitHub Metrics" width="800" />
 </div>
 
-<div align="center">
-  <!-- Isometric Calendar and Languages Plugin -->
-  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_isocalendar=yes&plugin_isocalendar_duration=half-year&theme=dark" alt="Isometric Calendar" width="395" />
-  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_languages=yes&plugin_languages_details=bytes-size,percentage&theme=dark" alt="Top Languages" width="395" />
-</div>
-
-<div align="center">
-  <!-- Coding Habits & Activity -->
-  <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_habits=yes&plugin_habits_charts=yes&plugin_habits_facts=yes&theme=dark" alt="Coding Habits" width="800" />
-</div>
-
 <br>
 
 ### 🐍 Contribution Graph
