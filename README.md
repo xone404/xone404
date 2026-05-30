@@ -37,7 +37,7 @@ I am a passionate **Website Developer** and **UI/UX Designer**. I specialize in 
 ### 🐍 Contribution Graph
 <div align="center">
   <!-- GitHub Streak -->
-  <img src="https://nirzak-streak-stats.vercel.app/?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" width="800" />
+  <img src="https://streak-stats.demolab.com?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" width="800" />
 </div>
 
 <br>
