@@ -29,7 +29,7 @@
     <td align="center">
       <h3>🛠️ Tech Stack &amp; Tools</h3>
       <a href="https://skillicons.dev">
-        <img src="https://skillicons.dev/icons?i=laravel,php,flutter,kotlin,java,py,html,css,figma,ps,mysql,git&theme=dark&perline=6" alt="My Skills" width="640">
+        <img src="https://skillicons.dev/icons?i=laravel,php,flutter,kotlin,java,py,html,css,figma,ps,mysql,git&theme=dark&perline=6" alt="My Skills" width="720">
       </a>
     </td>
   </tr>
@@ -41,7 +41,7 @@
   <tr>
     <td align="center">
       <h3>📊 GitHub Analytics &amp; Metrics</h3>
-      <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_isocalendar=yes&plugin_isocalendar_duration=half-year&theme=dark" alt="Isometric Calendar" width="540">
+      <img src="https://metrics.lecoq.io/xone404?template=classic&base=0&plugin_isocalendar=yes&plugin_isocalendar_duration=half-year&theme=dark" alt="Isometric Calendar" width="720">
     </td>
   </tr>
 </table>
@@ -52,12 +52,12 @@
   <tr>
     <td align="center">
       <h3>🐍 Contribution Graph</h3>
-      <img src="https://streak-stats.demolab.com?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" width="760">
+      <img src="https://streak-stats.demolab.com?user=xone404&theme=dark&hide_border=false" alt="GitHub Streak" width="720">
       <br><br>
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake-dark.svg">
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg">
-        <img src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation" width="760">
+        <img src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation" width="720">
       </picture>
     </td>
   </tr>
@@ -70,10 +70,11 @@
     <td align="center">
       <h3>📫 Connect With Me</h3>
       <a href="https://www.linkedin.com/in/alfidjr" target="_blank">
-        <img src="https://img.shields.io/static/v1?message=LinkedIn&logo=linkedin&label=&color=0077B5&logoColor=white&labelColor=&style=for-the-badge" height="30" alt="linkedin logo">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" height="34" alt="LinkedIn">
       </a>
+      &nbsp;
       <a href="https://www.instagram.com/xone.zy" target="_blank">
-        <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="30" alt="instagram logo">
+        <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" height="34" alt="Instagram">
       </a>
     </td>
   </tr>

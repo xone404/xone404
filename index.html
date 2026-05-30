@@ -95,17 +95,12 @@
       padding-left: 22px;
     }
 
-    .terminal,
-    .media-wide {
+    .terminal {
       width: min(100%, 760px);
     }
 
-    .media-medium {
-      width: min(100%, 640px);
-    }
-
-    .media-compact {
-      width: min(100%, 540px);
+    .media-uniform {
+      width: min(100%, 720px);
     }
 
     .media-stack {
@@ -114,11 +109,51 @@
       justify-items: center;
     }
 
-    .badge-row {
+    .social-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       justify-content: center;
+    }
+
+    .social-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      min-height: 44px;
+      gap: 9px;
+      padding: 10px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .social-button:hover {
+      transform: translateY(-1px);
+      border-color: var(--accent);
+    }
+
+    .social-button.linkedin {
+      background: #0a66c2;
+    }
+
+    .social-button.instagram {
+      background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
+    }
+
+    .social-icon {
+      display: inline-grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.18);
+      font-size: 14px;
+      line-height: 1;
     }
 
     @media (max-width: 640px) {
@@ -157,35 +192,37 @@
     <section class="card center">
       <h3>🛠️ Tech Stack &amp; Tools</h3>
       <a href="https://skillicons.dev">
-        <img class="media-medium" src="https://skillicons.dev/icons?i=laravel,php,flutter,kotlin,java,py,html,css,figma,ps,mysql,git&amp;theme=dark&amp;perline=6" alt="My Skills">
+        <img class="media-uniform" src="https://skillicons.dev/icons?i=laravel,php,flutter,kotlin,java,py,html,css,figma,ps,mysql,git&amp;theme=dark&amp;perline=6" alt="My Skills">
       </a>
     </section>
 
     <section class="card center">
       <h3>📊 GitHub Analytics &amp; Metrics</h3>
-      <img class="media-compact" src="https://metrics.lecoq.io/xone404?template=classic&amp;base=0&amp;plugin_isocalendar=yes&amp;plugin_isocalendar_duration=half-year&amp;theme=dark" alt="Isometric Calendar">
+      <img class="media-uniform" src="https://metrics.lecoq.io/xone404?template=classic&amp;base=0&amp;plugin_isocalendar=yes&amp;plugin_isocalendar_duration=half-year&amp;theme=dark" alt="Isometric Calendar">
     </section>
 
     <section class="card center">
       <h3>🐍 Contribution Graph</h3>
       <div class="media-stack">
-        <img class="media-wide" src="https://streak-stats.demolab.com?user=xone404&amp;theme=dark&amp;hide_border=false" alt="GitHub Streak">
+        <img class="media-uniform" src="https://streak-stats.demolab.com?user=xone404&amp;theme=dark&amp;hide_border=false" alt="GitHub Streak">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake-dark.svg">
           <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg">
-          <img class="media-wide" src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation">
+          <img class="media-uniform" src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation">
         </picture>
       </div>
     </section>
 
     <section class="card center">
       <h3>📫 Connect With Me</h3>
-      <div class="badge-row">
-        <a href="https://www.linkedin.com/in/alfidjr" target="_blank" rel="noreferrer">
-          <img src="https://img.shields.io/static/v1?message=LinkedIn&amp;logo=linkedin&amp;label=&amp;color=0077B5&amp;logoColor=white&amp;labelColor=&amp;style=for-the-badge" height="30" alt="linkedin logo">
+      <div class="social-row">
+        <a class="social-button linkedin" href="https://www.linkedin.com/in/alfidjr" target="_blank" rel="noreferrer">
+          <span class="social-icon">in</span>
+          LinkedIn
         </a>
-        <a href="https://www.instagram.com/xone.zy" target="_blank" rel="noreferrer">
-          <img src="https://img.shields.io/static/v1?message=Instagram&amp;logo=instagram&amp;label=&amp;color=E4405F&amp;logoColor=white&amp;labelColor=&amp;style=for-the-badge" height="30" alt="instagram logo">
+        <a class="social-button instagram" href="https://www.instagram.com/xone.zy" target="_blank" rel="noreferrer">
+          <span class="social-icon">IG</span>
+          Instagram
         </a>
       </div>
     </section>
