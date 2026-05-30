@@ -1,0 +1,77 @@
+<svg fill="none" viewBox="0 0 800 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07111f"/>
+      <stop offset="0.5" stop-color="#10253a"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <style>
+      .grid { animation: gridMove 5s linear infinite; }
+      .floor { animation: pulse 1.2s ease-in-out infinite alternate; }
+      .left { transform-origin: 300px 140px; animation: leftDash 1.05s ease-in-out infinite; }
+      .right { transform-origin: 500px 140px; animation: rightDash 1.05s ease-in-out infinite; }
+      .la { transform-origin: 326px 124px; animation: leftStrike 1.05s ease-in-out infinite; }
+      .ra { transform-origin: 474px 124px; animation: rightStrike 1.05s ease-in-out infinite; }
+      .ll { transform-origin: 326px 158px; animation: leftKick 1.05s ease-in-out infinite; }
+      .rl { transform-origin: 474px 158px; animation: rightKick 1.05s ease-in-out infinite; }
+      .impact { opacity: 0; transform-origin: 400px 132px; animation: burst 1.05s ease-in-out infinite; }
+      .shock { opacity: 0; transform-origin: 400px 132px; animation: shock 1.05s ease-out infinite; }
+      .spark { opacity: 0; animation: spark 1.05s ease-out infinite; }
+      .spark.b { animation-delay: 0.07s; }
+      .spark.c { animation-delay: 0.14s; }
+      @keyframes gridMove { to { transform: translateY(20px); } }
+      @keyframes pulse { from { opacity: 0.38; } to { opacity: 0.82; } }
+      @keyframes leftDash { 0%, 100% { transform: translateX(-8px); } 42% { transform: translateX(20px) translateY(-3px); } 70% { transform: translateX(-14px); } }
+      @keyframes rightDash { 0%, 100% { transform: translateX(8px); } 42% { transform: translateX(-20px) translateY(-3px); } 70% { transform: translateX(14px); } }
+      @keyframes leftStrike { 0%, 100% { transform: rotate(20deg); } 42% { transform: rotate(-40deg) scaleX(1.22); } 70% { transform: rotate(42deg); } }
+      @keyframes rightStrike { 0%, 100% { transform: rotate(-20deg); } 42% { transform: rotate(40deg) scaleX(1.22); } 70% { transform: rotate(-42deg); } }
+      @keyframes leftKick { 0%, 100% { transform: rotate(8deg); } 62% { transform: rotate(-36deg) translateX(12px); } }
+      @keyframes rightKick { 0%, 100% { transform: rotate(-8deg); } 62% { transform: rotate(36deg) translateX(-12px); } }
+      @keyframes burst { 35%, 48% { opacity: 1; transform: scale(1); } 72%, 100%, 0% { opacity: 0; transform: scale(1.8); } }
+      @keyframes shock { 36% { opacity: 0.9; transform: scale(0.4); } 78%, 100%, 0% { opacity: 0; transform: scale(2.2); } }
+      @keyframes spark { 35%, 50% { opacity: 1; transform: translateY(-4px) scale(1); } 80%, 100%, 0% { opacity: 0; transform: translateY(-24px) scale(0.55); } }
+    </style>
+  </defs>
+
+  <rect width="800" height="260" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="798" height="258" rx="13" stroke="#30363d"/>
+  <g class="grid" opacity="0.34" stroke="#1f6feb" stroke-width="1">
+    <path d="M64 48H736M64 88H736M64 128H736M64 168H736M64 208H736"/>
+    <path d="M96 36V228M176 36V228M256 36V228M336 36V228M416 36V228M496 36V228M576 36V228M656 36V228M736 36V228"/>
+  </g>
+  <ellipse cx="400" cy="188" rx="270" ry="30" fill="#238636" opacity="0.42"/>
+  <ellipse class="floor" cx="400" cy="184" rx="235" ry="22" fill="#58a6ff"/>
+
+  <g filter="url(#glow)">
+    <circle class="shock" cx="400" cy="132" r="34" stroke="#f2cc60" stroke-width="5"/>
+    <path class="impact" d="M400 96l10 25 28-5-22 18 14 26-30-13-26 18 7-31-27-15 33-3z" fill="#ffdf6e"/>
+    <path class="spark" d="M363 126l15 5-13 10 4-15-13-8z" fill="#58a6ff"/>
+    <path class="spark b" d="M432 122l18-8-7 18 16 10-20 2-10 17-5-20-18-6z" fill="#ff7b72"/>
+    <path class="spark c" d="M398 72l8 16 18 2-14 12 5 18-17-9-16 9 4-18-14-12 19-2z" fill="#a371f7"/>
+  </g>
+
+  <g class="left" stroke="#58a6ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <circle cx="305" cy="90" r="18" fill="none"/>
+    <path d="M312 110L326 158"/>
+    <path class="la" d="M322 124L374 130"/>
+    <path d="M318 124L282 138"/>
+    <path class="ll" d="M326 158L380 170"/>
+    <path d="M326 158L292 204"/>
+  </g>
+
+  <g class="right" stroke="#ff7b72" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <circle cx="495" cy="90" r="18" fill="none"/>
+    <path d="M488 110L474 158"/>
+    <path class="ra" d="M478 124L426 130"/>
+    <path d="M482 124L518 138"/>
+    <path class="rl" d="M474 158L420 170"/>
+    <path d="M474 158L508 204"/>
+  </g>
+</svg>

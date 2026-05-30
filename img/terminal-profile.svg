@@ -1,86 +1,181 @@
-<svg fill="none" viewBox="0 0 800 200" width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="
-      width: 100%; height: 100%;
-      background: #0d1117;
-      border-radius: 8px;
-      border: 1px solid #30363d;
-      font-family: 'Consolas', 'Courier New', monospace;
-      color: #c9d1d9;
-      padding: 24px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    ">
-      <style>
-        .container { font-size: 16px; line-height: 1.8; }
-        .keyword { color: #ff7b72; }
-        .string { color: #a5d6ff; }
-        .variable { color: #79c0ff; }
-        .comment { color: #8b949e; font-style: italic; }
-        .bracket { color: #e6edf3; }
-        
-        /* Setup baris agar bisa disembunyikan dan diketik */
-        .line {
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          width: 0;
-        }
-        
-        /* Pengaturan urutan dan durasi animasi mengetik */
-        .l1 { animation: typing 0.8s steps(30, end) forwards; animation-delay: 0.5s; }
-        .l2 { animation: typing 1s steps(40, end) forwards; animation-delay: 1.5s; }
-        .l3 { animation: typing 1.2s steps(50, end) forwards; animation-delay: 2.7s; }
-        .l4 { animation: typing 1.2s steps(50, end) forwards; animation-delay: 4.1s; }
-        
-        @keyframes typing {
-          from { width: 0; }
-          to { width: 100%; }
-        }
-        
-        /* Memunculkan baris terminal bash di akhir */
-        .cli-prompt {
-          opacity: 0;
-          animation: appear 0.1s forwards;
-          animation-delay: 5.5s;
-        }
-        
-        /* Kursor kotak berkedip */
-        .cursor {
-          display: inline-block;
-          width: 8px;
-          height: 18px;
-          background-color: #c9d1d9;
-          vertical-align: text-bottom;
-          margin-left: 6px;
-          opacity: 0;
-          animation: blink 1s step-end infinite;
-          animation-delay: 5.5s;
-        }
-        
-        @keyframes appear {
-          to { opacity: 1; }
-        }
-        
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-      </style>
-      
-      <div class="container">
-        <div class="line l1"><span class="comment">// profile_init.php</span></div>
-        <div class="line l2"><span class="keyword">echo</span> <span class="string">"Hello, I'm Alfid J.R. 👋"</span><span class="bracket">;</span></div>
-        <div class="line l3"><span class="variable">$roles</span> <span class="keyword">=</span> <span class="bracket">[</span><span class="string">'Website Developer'</span>, <span class="string">'UI/UX Designer'</span><span class="bracket">];</span></div>
-        <div class="line l4"><span class="variable">$stack</span> <span class="keyword">=</span> <span class="bracket">[</span><span class="string">'Laravel'</span>, <span class="string">'PHP'</span>, <span class="string">'Flutter'</span><span class="bracket">];</span></div>
-        
-        <div style="margin-top: 12px;" class="cli-prompt">
-          <span style="color:#3fb950; font-weight: bold;">xone404@server</span><span style="color:#e6edf3;">:</span><span style="color:#2f81f7;">~</span><span style="color:#e6edf3;">$</span>
-          <span class="cursor"></span>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+<svg fill="none" viewBox="0 0 800 260" width="100%" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="arenaGlow" x1="0" y1="0" x2="800" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d1117"/>
+      <stop offset="0.5" stop-color="#101c2a"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .term { animation: terminalOut 15s infinite; }
+      .arena { opacity: 0; animation: arenaIn 15s infinite; }
+      .code { font: 18px/1.6 Consolas, "Courier New", monospace; }
+      .comment { fill: #8b949e; font-style: italic; }
+      .keyword { fill: #ff7b72; font-weight: 700; }
+      .string { fill: #a5d6ff; }
+      .variable { fill: #79c0ff; font-weight: 700; }
+      .plain { fill: #e6edf3; }
+      .prompt { fill: #3fb950; font-weight: 700; }
+      .cursor { fill: #c9d1d9; animation: blink 0.9s steps(1) infinite; }
+      .line { clip-path: inset(0 100% 0 0); }
+      .l1 { animation: typeLine 15s steps(23, end) infinite; }
+      .l2 { animation: typeLine 15s steps(31, end) infinite; }
+      .l3 { animation: typeLine 15s steps(46, end) infinite; }
+      .l4 { animation: typeLine 15s steps(39, end) infinite; }
+      .cli { opacity: 0; animation: promptIn 15s infinite; }
+
+      .floor { animation: floorPulse 1.4s ease-in-out infinite alternate; }
+      .fighter-left { transform-origin: 300px 142px; animation: leftMove 1.15s ease-in-out infinite; }
+      .fighter-right { transform-origin: 500px 142px; animation: rightMove 1.15s ease-in-out infinite; }
+      .left-arm { transform-origin: 328px 126px; animation: leftPunch 1.15s ease-in-out infinite; }
+      .right-arm { transform-origin: 472px 126px; animation: rightPunch 1.15s ease-in-out infinite; }
+      .left-leg { transform-origin: 318px 162px; animation: leftKick 1.15s ease-in-out infinite; }
+      .right-leg { transform-origin: 482px 162px; animation: rightKick 1.15s ease-in-out infinite; }
+      .impact { opacity: 0; transform-origin: 400px 135px; animation: impactFlash 1.15s ease-in-out infinite; }
+      .spark { opacity: 0; animation: sparkPop 1.15s ease-in-out infinite; }
+      .spark.s2 { animation-delay: 0.08s; }
+      .spark.s3 { animation-delay: 0.16s; }
+      .ring { opacity: 0.18; animation: ringPulse 1.8s ease-in-out infinite alternate; }
+
+      @keyframes typeLine {
+        0%, 3% { clip-path: inset(0 100% 0 0); }
+        10%, 100% { clip-path: inset(0 0 0 0); }
+      }
+      .l2 { animation-delay: 0.9s; }
+      .l3 { animation-delay: 1.9s; }
+      .l4 { animation-delay: 3.1s; }
+
+      @keyframes promptIn {
+        0%, 34% { opacity: 0; }
+        36%, 46% { opacity: 1; }
+        52%, 100% { opacity: 0; }
+      }
+      @keyframes terminalOut {
+        0%, 46% { opacity: 1; transform: translateY(0); }
+        52%, 100% { opacity: 0; transform: translateY(-8px); }
+      }
+      @keyframes arenaIn {
+        0%, 48% { opacity: 0; transform: scale(0.98); }
+        55%, 94% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0; transform: scale(1.01); }
+      }
+      @keyframes blink {
+        0%, 52%, 100% { opacity: 1; }
+        53%, 99% { opacity: 0; }
+      }
+      @keyframes floorPulse {
+        from { opacity: 0.35; }
+        to { opacity: 0.75; }
+      }
+      @keyframes leftMove {
+        0%, 100% { transform: translateX(0); }
+        42% { transform: translateX(18px) translateY(-2px); }
+        70% { transform: translateX(-6px); }
+      }
+      @keyframes rightMove {
+        0%, 100% { transform: translateX(0); }
+        42% { transform: translateX(-18px) translateY(-2px); }
+        70% { transform: translateX(6px); }
+      }
+      @keyframes leftPunch {
+        0%, 100% { transform: rotate(18deg); }
+        42% { transform: rotate(-38deg) scaleX(1.18); }
+        70% { transform: rotate(38deg); }
+      }
+      @keyframes rightPunch {
+        0%, 100% { transform: rotate(-18deg); }
+        42% { transform: rotate(38deg) scaleX(1.18); }
+        70% { transform: rotate(-38deg); }
+      }
+      @keyframes leftKick {
+        0%, 100% { transform: rotate(8deg); }
+        64% { transform: rotate(-34deg) translateX(10px); }
+      }
+      @keyframes rightKick {
+        0%, 100% { transform: rotate(-8deg); }
+        64% { transform: rotate(34deg) translateX(-10px); }
+      }
+      @keyframes impactFlash {
+        35%, 47% { opacity: 1; transform: scale(1); }
+        60%, 100%, 0% { opacity: 0; transform: scale(1.7); }
+      }
+      @keyframes sparkPop {
+        35%, 50% { opacity: 1; transform: translateY(-4px) scale(1); }
+        75%, 100%, 0% { opacity: 0; transform: translateY(-18px) scale(0.65); }
+      }
+      @keyframes ringPulse {
+        from { transform: scaleX(0.9); }
+        to { transform: scaleX(1.06); }
+      }
+    </style>
+  </defs>
+
+  <rect width="800" height="260" rx="14" fill="#0d1117"/>
+  <rect x="1" y="1" width="798" height="258" rx="13" stroke="#30363d"/>
+
+  <g class="term">
+    <rect x="32" y="28" width="736" height="204" rx="10" fill="#0d1117" stroke="#30363d"/>
+    <g class="code">
+      <text class="line l1 comment" x="62" y="68">// profile_init.php</text>
+
+      <text class="line l2" x="62" y="106">
+        <tspan class="keyword">echo</tspan><tspan class="plain"> </tspan><tspan class="string">"Hello, I'm Alfid J.R. 👋"</tspan><tspan class="plain">;</tspan>
+      </text>
+
+      <text class="line l3" x="62" y="144">
+        <tspan class="variable">$roles</tspan><tspan class="plain"> = [</tspan><tspan class="string">'Website Developer'</tspan><tspan class="plain">, </tspan><tspan class="string">'UI/UX Designer'</tspan><tspan class="plain">];</tspan>
+      </text>
+
+      <text class="line l4" x="62" y="182">
+        <tspan class="variable">$stack</tspan><tspan class="plain"> = [</tspan><tspan class="string">'Laravel'</tspan><tspan class="plain">, </tspan><tspan class="string">'PHP'</tspan><tspan class="plain">, </tspan><tspan class="string">'Flutter'</tspan><tspan class="plain">];</tspan>
+      </text>
+
+      <text class="cli" x="62" y="216">
+        <tspan class="prompt">xone404@server</tspan><tspan class="plain">:</tspan><tspan fill="#2f81f7">~</tspan><tspan class="plain">$</tspan>
+      </text>
+      <rect class="cli cursor" x="236" y="199" width="10" height="22" rx="1"/>
+    </g>
+  </g>
+
+  <g class="arena">
+    <rect x="32" y="28" width="736" height="204" rx="10" fill="url(#arenaGlow)" stroke="#30363d"/>
+    <g opacity="0.45">
+      <path d="M80 56H720M80 96H720M80 136H720M80 176H720M120 42V214M200 42V214M280 42V214M360 42V214M440 42V214M520 42V214M600 42V214M680 42V214" stroke="#1f6feb" stroke-width="1"/>
+    </g>
+    <ellipse class="ring" cx="400" cy="178" rx="230" ry="38" fill="#1f6feb"/>
+    <ellipse class="floor" cx="400" cy="186" rx="250" ry="24" fill="#238636" opacity="0.5"/>
+
+    <g filter="url(#glow)">
+      <circle class="impact" cx="400" cy="132" r="28" fill="#f2cc60"/>
+      <path class="spark s1" d="M400 102l8 18 20-4-16 13 10 18-22-9-18 13 5-22-18-10 23-2z" fill="#ffdf6e"/>
+      <path class="spark s2" d="M365 128l12 5-10 8 3-12-10-7z" fill="#58a6ff"/>
+      <path class="spark s3" d="M430 124l14-6-5 15 12 8-16 1-8 14-4-16-15-4z" fill="#ff7b72"/>
+    </g>
+
+    <g class="fighter-left" stroke="#58a6ff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+      <circle cx="305" cy="92" r="18" fill="none"/>
+      <path d="M312 112L326 158"/>
+      <path class="left-arm" d="M322 126L374 132"/>
+      <path d="M318 126L282 140"/>
+      <path class="left-leg" d="M326 158L378 170"/>
+      <path d="M326 158L294 202"/>
+    </g>
+
+    <g class="fighter-right" stroke="#ff7b72" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+      <circle cx="495" cy="92" r="18" fill="none"/>
+      <path d="M488 112L474 158"/>
+      <path class="right-arm" d="M478 126L426 132"/>
+      <path d="M482 126L518 140"/>
+      <path class="right-leg" d="M474 158L422 170"/>
+      <path d="M474 158L506 202"/>
+    </g>
+  </g>
 </svg>

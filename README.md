@@ -4,11 +4,11 @@
 
 <br>
 
-<table align="center" width="100%">
+<table align="center" width="760">
   <tr>
     <td>
       <div align="center">
-        <img src="img/terminal-profile.svg" alt="Terminal Animation" width="760">
+        <img src="img/terminal-profile.svg" alt="Terminal Animation" width="720">
       </div>
       <h3>👨‍💻 About Me</h3>
       <p>I am a passionate <strong>Website Developer</strong> and <strong>UI/UX Designer</strong>. I specialize in building responsive, user-centric applications and designing intuitive digital experiences. Bridging the gap between visually appealing designs and robust functional code is what I do best.</p>
@@ -24,7 +24,7 @@
 
 <br>
 
-<table align="center" width="100%">
+<table align="center" width="760">
   <tr>
     <td align="center">
       <h3>🛠️ Tech Stack &amp; Tools</h3>
@@ -37,7 +37,7 @@
 
 <br>
 
-<table align="center" width="100%">
+<table align="center" width="760">
   <tr>
     <td align="center">
       <h3>📊 GitHub Analytics &amp; Metrics</h3>
@@ -48,7 +48,7 @@
 
 <br>
 
-<table align="center" width="100%">
+<table align="center" width="760">
   <tr>
     <td align="center">
       <h3>🐍 Contribution Graph</h3>
@@ -65,7 +65,7 @@
 
 <br>
 
-<table align="center" width="100%">
+<table align="center" width="760">
   <tr>
     <td align="center">
       <h3>📫 Connect With Me</h3>
