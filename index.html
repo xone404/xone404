@@ -3,17 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>xone404 GitHub Profile Preview</title>
+  <title>xone404 — GitHub Profile Bento Preview</title>
   <style>
     :root {
       color-scheme: dark;
-      --bg: #0d1117;
-      --panel: #161b22;
-      --panel-soft: #111820;
-      --text: #e6edf3;
-      --muted: #8b949e;
-      --border: #30363d;
-      --accent: #2f81f7;
+      --bg: #090d16;
+      --panel: #111827;
+      --panel-inner: #0d131f;
+      --text: #f3f4f6;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --accent-blue: #2f81f7;
+      --accent-orange: #f77737;
     }
 
     * {
@@ -22,51 +23,49 @@
 
     body {
       margin: 0;
-      background: var(--bg);
+      background: radial-gradient(circle at top, #132038 0%, var(--bg) 45%);
       color: var(--text);
-      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font: 15px/1.65 "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     main {
       width: min(100%, 820px);
       margin: 0 auto;
-      padding: 28px 18px 48px;
+      padding: 32px 18px 60px;
     }
 
-    h1,
-    h3,
-    p,
-    ul {
+    h1, h3, p, ul {
       margin-top: 0;
     }
 
     h1 {
-      margin-bottom: 18px;
-      font-size: clamp(30px, 5vw, 44px);
-      line-height: 1.2;
-      text-align: center;
+      margin-bottom: 8px;
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
     }
 
     h3 {
-      margin-bottom: 16px;
-      font-size: clamp(20px, 3vw, 24px);
-      line-height: 1.25;
+      margin-bottom: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
     }
 
-    p,
-    ul {
+    p {
+      color: var(--muted);
       margin-bottom: 0;
     }
 
-    a {
-      color: var(--accent);
+    strong {
+      color: var(--text);
     }
 
     img {
-      display: inline-block;
-      height: auto;
       max-width: 100%;
+      height: auto;
       vertical-align: middle;
+      border-radius: 6px;
     }
 
     .center {
@@ -74,38 +73,70 @@
     }
 
     .card {
-      margin-top: 20px;
-      padding: clamp(18px, 3vw, 28px);
+      margin-top: 18px;
+      padding: 24px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 16px;
       background: var(--panel);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
     }
 
-    .intro-card {
+    .hero-header {
+      border-top: 2px solid var(--accent-blue);
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 14px;
+    }
+
+    .bento-two-col {
       display: grid;
-      gap: 22px;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+      margin-top: 18px;
     }
 
-    .about {
-      width: min(100%, 760px);
-      margin-inline: auto;
+    .bento-equal {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 16px;
     }
 
-    .about ul {
-      padding-left: 22px;
+    .bento-box {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel-inner);
     }
 
-    .terminal {
-      width: min(100%, 720px);
+    .bento-box p.label {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-blue);
+      margin-bottom: 12px;
     }
 
-    .media-uniform {
-      width: min(100%, 720px);
+    ul.highlights {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    ul.highlights li + li {
+      margin-top: 6px;
     }
 
     .media-stack {
       display: grid;
-      gap: 18px;
+      gap: 16px;
       justify-items: center;
     }
 
@@ -114,116 +145,127 @@
       flex-wrap: wrap;
       gap: 12px;
       justify-content: center;
+      margin-top: 18px;
     }
 
     .social-button {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      min-width: 150px;
-      min-height: 44px;
-      gap: 9px;
-      padding: 10px 18px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      color: var(--text);
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: #ffffff;
       font-weight: 700;
+      font-size: 14px;
       text-decoration: none;
-      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: transform 150ms ease, filter 150ms ease;
     }
 
     .social-button:hover {
-      transform: translateY(-1px);
-      border-color: var(--accent);
+      transform: translateY(-2px);
+      filter: brightness(1.1);
     }
 
-    .social-button.linkedin {
-      background: #0a66c2;
-    }
+    .social-button.linkedin { background: #0a66c2; }
+    .social-button.instagram { background: linear-gradient(135deg, #833ab4, #e1306c, #f77737); }
+    .social-button.github { background: #24292f; }
 
-    .social-button.instagram {
-      background: linear-gradient(135deg, #833ab4, #e1306c, #f77737);
-    }
-
-    .social-icon {
-      display: inline-grid;
-      width: 24px;
-      height: 24px;
-      place-items: center;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.18);
-      font-size: 14px;
-      line-height: 1;
-    }
-
-    @media (max-width: 640px) {
-      main {
-        padding-inline: 14px;
-      }
-
-      .card {
-        margin-top: 16px;
+    @media (max-width: 680px) {
+      .bento-two-col,
+      .bento-equal {
+        grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
   <main>
-    <header class="card">
+    <header class="card hero-header center">
       <h1>Hello, I'm Alfid J.R. 👋</h1>
+      <img src="https://readme-typing-svg.demolab.com?font=Plus+Jakarta+Sans&weight=700&size=20&duration=3000&pause=1000&color=2F81F7&center=true&vCenter=true&width=580&lines=Full-Stack+Website+Developer;UI%2FUX+Designer+%26+Visual+Creator;System+Architecture+%26+Web+Automation;Bridging+Aesthetic+Design+%26+Robust+Code" alt="Typing SVG">
+      <div class="badge-row">
+        <img src="https://komarev.com/ghpvc/?username=xone404&label=Profile%20Views&color=2f81f7&style=flat-square" alt="Profile Views">
+        <img src="https://img.shields.io/github/followers/xone404?label=Followers&style=flat-square&color=f77737" alt="Followers">
+        <img src="https://img.shields.io/badge/Focus-Web%20%26%20UI%2FUX-0A66C2?style=flat-square" alt="Focus">
+        <img src="https://img.shields.io/badge/Status-Building%20Digital%20Products-2ea043?style=flat-square" alt="Status">
+      </div>
     </header>
 
-    <section class="card intro-card">
+    <section class="card">
       <div class="center">
-        <img class="terminal" src="img/terminal-profile.svg" alt="Terminal Animation">
+        <img src="img/terminal-profile.svg" alt="Terminal Animation" width="720">
       </div>
-      <div class="about">
-        <h3>👨‍💻 About Me</h3>
-        <p>I am a passionate <strong>Website Developer</strong> and <strong>UI/UX Designer</strong>. I specialize in building responsive, user-centric applications and designing intuitive digital experiences. Bridging the gap between visually appealing designs and robust functional code is what I do best.</p>
-        <ul>
-          <li>🏢 Currently working as a Website Manager &amp; Programmer, focusing on dynamic platforms and dashboards.</li>
-          <li>💻 My main tech stack includes <strong>Laravel</strong>, <strong>PHP</strong>, <strong>Flutter</strong>, and modern UI/UX design tools.</li>
-          <li>🎓 Informatics graduate with a strong foundation in software engineering and system architecture.</li>
-          <li>📫 How to reach me: Catch me on my social links below!</li>
-        </ul>
+      <div class="bento-two-col">
+        <div class="bento-box">
+          <h3>👨‍💻 About Me</h3>
+          <p>I am a passionate <strong>Website Developer</strong> and <strong>UI/UX Designer</strong> specializing in responsive, user-centric web platforms and intuitive digital interfaces. I focus on bridging the gap between clean visual systems and scalable backend architecture.</p>
+        </div>
+        <div class="bento-box">
+          <h3>⚡ Quick Highlights</h3>
+          <ul class="highlights">
+            <li>🏢 <strong>Role:</strong> Website Manager &amp; Programmer</li>
+            <li>🎯 <strong>Focus:</strong> Dynamic Platforms &amp; Automation</li>
+            <li>🎓 <strong>Degree:</strong> B.Comp.Sc. in Informatics</li>
+            <li>🎨 <strong>Craft:</strong> Bento UI &amp; Design Systems</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section class="card center">
-      <h3>🛠️ Tech Stack &amp; Tools</h3>
-      <a href="https://skillicons.dev">
-        <img class="media-uniform" src="https://skillicons.dev/icons?i=laravel,php,flutter,kotlin,java,py,html,css,figma,ps,mysql,git&amp;theme=dark&amp;perline=6" alt="My Skills">
-      </a>
+      <h3>🛠️ Tech Stack &amp; Arsenal</h3>
+      <div class="bento-equal">
+        <div class="bento-box">
+          <p class="label">Backend &amp; Database</p>
+          <img src="https://skillicons.dev/icons?i=laravel,php,nodejs,py,mysql,postgres&theme=dark" height="44" alt="Backend">
+        </div>
+        <div class="bento-box">
+          <p class="label">Frontend &amp; Mobile</p>
+          <img src="https://skillicons.dev/icons?i=nextjs,ts,flutter,kotlin,html,css&theme=dark" height="44" alt="Frontend">
+        </div>
+        <div class="bento-box">
+          <p class="label">UI/UX &amp; Creative</p>
+          <img src="https://skillicons.dev/icons?i=figma,ps,ai&theme=dark" height="44" alt="Design">
+        </div>
+        <div class="bento-box">
+          <p class="label">DevOps &amp; Workflow</p>
+          <img src="https://skillicons.dev/icons?i=git,github,cloudflare,vscode,linux&theme=dark" height="44" alt="Tools">
+        </div>
+      </div>
     </section>
 
     <section class="card center">
       <h3>📊 GitHub Analytics &amp; Metrics</h3>
-      <img class="media-uniform" src="https://metrics.lecoq.io/xone404?template=classic&amp;base=0&amp;plugin_isocalendar=yes&amp;plugin_isocalendar_duration=half-year&amp;theme=dark" alt="Isometric Calendar">
+      <div class="media-stack">
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=xone404&theme=github_dark" alt="Profile Summary" width="720">
+        <div class="bento-equal" style="width: 100%; margin-top: 0;">
+          <img src="https://github-profile-summary-cards.vercel.app/api/cards/Stats?username=xone404&theme=github_dark" alt="GitHub Stats">
+          <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=xone404&theme=github_dark" alt="Top Languages">
+        </div>
+      </div>
     </section>
 
     <section class="card center">
-      <h3>🐍 Contribution Graph</h3>
+      <h3>🐍 Contribution &amp; Activity Graph</h3>
       <div class="media-stack">
-        <img class="media-uniform" src="https://streak-stats.demolab.com?user=xone404&amp;theme=dark&amp;hide_border=false" alt="GitHub Streak">
+        <img src="https://streak-stats.demolab.com?user=xone404&theme=dark&hide_border=true&background=0D131F&ring=F77737&fire=F77737&currStreakLabel=2F81F7" alt="GitHub Streak" width="720">
+        <img src="https://github-readme-activity-graph.vercel.app/graph?username=xone404&bg_color=0d131f&color=9ca3af&line=2f81f7&point=f77737&area=true&hide_border=true" alt="Activity Graph" width="720">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake-dark.svg">
           <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg">
-          <img class="media-uniform" src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation">
+          <img src="https://raw.githubusercontent.com/xone404/xone404/output/snake.svg" alt="Snake animation" width="720">
         </picture>
       </div>
     </section>
 
     <section class="card center">
-      <h3>📫 Connect With Me</h3>
+      <h3>📫 Let's Connect &amp; Collaborate</h3>
+      <p>Open for web platform development, UI/UX design collaborations, and tech discussions.</p>
       <div class="social-row">
-        <a class="social-button linkedin" href="https://www.linkedin.com/in/alfidjr" target="_blank" rel="noreferrer">
-          <span class="social-icon">in</span>
-          LinkedIn
-        </a>
-        <a class="social-button instagram" href="https://www.instagram.com/xone.zy" target="_blank" rel="noreferrer">
-          <span class="social-icon">IG</span>
-          Instagram
-        </a>
+        <a class="social-button linkedin" href="https://www.linkedin.com/in/alfidjr" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="social-button instagram" href="https://www.instagram.com/xone.zy" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="social-button github" href="https://github.com/xone404" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </section>
   </main>
